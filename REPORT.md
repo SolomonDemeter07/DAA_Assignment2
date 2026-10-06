@@ -3,19 +3,19 @@
 ## 1. Complexity Table
 | Structure | Operation | Best Case | Average Case | Worst Case | Auxiliary Space | Justification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **DynamicArray** | `add(x)` | \(\Theta(1)\) | \(\Theta(1)\) amortized | \(\Theta(n)\) | \(\Theta(n)\) | Worst case occurs when the array is full and requires a \(O(n)\) resize. |
-| | `add(index, x)` | \(\Theta(1)\) | \(\Theta(n)\) | \(\Theta(n)\) | \(\Theta(n)\) | Requires shifting elements to the right. Best case is adding at the very end. |
-| | `remove(index)` | \(\Theta(1)\) | \(\Theta(n)\) | \(\Theta(n)\) | \(\Theta(n)\) | Requires shifting elements to the left. Best case is removing the last element. |
-| | `get(index)` | \(\Theta(1)\) | \(\Theta(1)\) | \(\Theta(1)\) | \(\Theta(n)\) | Direct index access via contiguous array memory. |
-| | `contains(x)` | \(\Theta(1)\) | \(\Theta(n)\) | \(\Theta(n)\) | \(\Theta(n)\) | Linear scan. Best case is when the element is at index 0. |
-| **MyLinkedList** | `add(x)` | \(\Theta(1)\) | \(\Theta(1)\) | \(\Theta(1)\) | \(\Theta(n)\) | Appending to the `tail` pointer takes constant time. |
-| | `add(index, x)` | \(\Theta(1)\) | \(\Theta(n)\) | \(\Theta(n)\) | \(\Theta(n)\) | Must traverse nodes from head to the target index. Best case is index 0. |
-| | `remove(index)` | \(\Theta(1)\) | \(\Theta(n)\) | \(\Theta(n)\) | \(\Theta(n)\) | Traversal required to find the node before the removed one. Best case is index 0. |
-| | `get(index)` | \(\Theta(1)\) | \(\Theta(n)\) | \(\Theta(n)\) | \(\Theta(n)\) | Sequential traversal from the head node. |
-| | `contains(x)` | \(\Theta(1)\) | \(\Theta(n)\) | \(\Theta(n)\) | \(\Theta(n)\) | Linear node traversal. |
-| **MinHeap** | `insert(x)` | \(\Theta(1)\) | \(O(\log n)\) | \(\Theta(\log n)\) | \(\Theta(n)\) | Bubble-up compares with parents. Best case: new element is the largest. |
-| | `peekMin()` | \(\Theta(1)\) | \(\Theta(1)\) | \(\Theta(1)\) | \(\Theta(n)\) | The minimum is always at the root (index 0). |
-| | `extractMin()`| \(\Theta(1)\) | \(O(\log n)\) | \(\Theta(\log n)\) | \(\Theta(n)\) | Swaps root with last element and bubbles down. |
+| **DynamicArray** | `add(x)` | Θ(1) | Θ(1) amortized | Θ(n) | Θ(n) | Worst case occurs when the array is full and requires an O(n) resize. |
+| | `add(index, x)` | Θ(1) | Θ(n) | Θ(n) | Θ(n) | Requires shifting elements to the right. Best case is adding at the very end. |
+| | `remove(index)` | Θ(1) | Θ(n) | Θ(n) | Θ(n) | Requires shifting elements to the left. Best case is removing the last element. |
+| | `get(index)` | Θ(1) | Θ(1) | Θ(1) | Θ(n) | Direct index access via contiguous array memory. |
+| | `contains(x)` | Θ(1) | Θ(n) | Θ(n) | Θ(n) | Linear scan. Best case is when the element is at index 0. |
+| **MyLinkedList** | `add(x)` | Θ(1) | Θ(1) | Θ(1) | Θ(n) | Appending to the `tail` pointer takes constant time. |
+| | `add(index, x)` | Θ(1) | Θ(n) | Θ(n) | Θ(n) | Must traverse nodes from head to the target index. Best case is index 0. |
+| | `remove(index)` | Θ(1) | Θ(n) | Θ(n) | Θ(n) | Traversal required to find the node before the removed one. Best case is index 0. |
+| | `get(index)` | Θ(1) | Θ(n) | Θ(n) | Θ(n) | Sequential traversal from the head node. |
+| | `contains(x)` | Θ(1) | Θ(n) | Θ(n) | Θ(n) | Linear node traversal. |
+| **MinHeap** | `insert(x)` | Θ(1) | O(log n) | Θ(log n) | Θ(n) | Bubble-up compares with parents. Best case: new element is the largest. |
+| | `peekMin()` | Θ(1) | Θ(1) | Θ(1) | Θ(n) | The minimum is always at the root (index 0). |
+| | `extractMin()`| Θ(1) | O(log n) | Θ(log n) | Θ(n) | Swaps root with last element and bubbles down. |
 
 ## 2. Loop Invariant Proofs
 
